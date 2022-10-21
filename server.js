@@ -20,7 +20,7 @@ mongoose.connect(DB_URL, {
 app.use(express.json())
 app.use(express.urlencoded())
 
-app.use("/employee/", employeesRoutes)
+app.use("/api/emp/", employeesRoutes)
 
 app.route("/")
     .get((req, res) => {
