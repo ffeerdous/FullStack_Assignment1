@@ -50,7 +50,7 @@ routes.put("/employees/:eid", async (req, res) => {
 routes.delete("/employees", async (req, res) => {
     //res.send({...req.query, message: "Delete Employee by ID"})
     try{
-        const deletedEmp = await employeeModel.findByIdAndDelete(req.query.eid, req.body)
+        const deletedEmp = await employeeModel.findByIdAndDelete(req.query.eid, req.body, {runValidators: true})
         if(!deletedEmp){
             res.status(500).send(error)
         }

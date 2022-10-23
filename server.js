@@ -1,5 +1,6 @@
 const express = require('express');
 const employeesRoutes = require("./routes/employees")
+const userRoutes = require("./routes/users")
 const mongoose = require('mongoose');
 
 const app = express();
@@ -20,6 +21,7 @@ app.use(express.json())
 app.use(express.urlencoded())
 
 app.use("/api/emp/", employeesRoutes)
+app.use("/api/user/", userRoutes)
 
 app.route("/")
     .get((req, res) => {
