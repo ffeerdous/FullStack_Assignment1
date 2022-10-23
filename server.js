@@ -1,5 +1,4 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const employeesRoutes = require("./routes/employees")
 const mongoose = require('mongoose');
 
