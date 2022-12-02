@@ -4,7 +4,7 @@ const userRoutes = require("./routes/users")
 const mongoose = require('mongoose');
 
 const app = express();
-const SERVER_PORT = process.env.PORT || 3000;
+const SERVER_PORT = 4000;
 const DB_URL = "mongodb+srv://ffeerdous:Feerdaus12$@cluster0.au6ya1r.mongodb.net/EmployeesDb?retryWrites=true&w=majority"
 
 mongoose.connect(DB_URL, {
