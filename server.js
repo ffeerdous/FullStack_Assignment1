@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 const app = express();
-app.use(cors({origin: true, credentials: true}));
+app.use(cors());
 const SERVER_PORT = 3001;
 const DB_URL = "mongodb+srv://ffeerdous:Feerdaus12$@cluster0.au6ya1r.mongodb.net/EmployeesDb?retryWrites=true&w=majority"
 
