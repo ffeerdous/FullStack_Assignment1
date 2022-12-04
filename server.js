@@ -2,9 +2,11 @@ const express = require('express');
 const employeesRoutes = require("./routes/employees")
 const userRoutes = require("./routes/users")
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 const app = express();
-const SERVER_PORT = process.env.PORT || 80
+app.use(cors({origin: true, credentials: true}));
+const SERVER_PORT = 3001;
 const DB_URL = "mongodb+srv://ffeerdous:Feerdaus12$@cluster0.au6ya1r.mongodb.net/EmployeesDb?retryWrites=true&w=majority"
 
 mongoose.connect(DB_URL, {
@@ -25,7 +27,7 @@ app.use("/api/user/", userRoutes)
 
 app.route("/")
     .get((req, res) => {
-        res.send("<h1>Welcome to Employee Assignment 1</h1>")
+        res.send("<h1>Welcome to Employee Assignment 2</h1>")
     })
 app.listen(SERVER_PORT, () => {
     console.log(`Server runnig at http://localhost:${SERVER_PORT}/`)

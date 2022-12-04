@@ -6,9 +6,9 @@ routes.get("/employees", async (req, res) => {
     //res.send({message: "Get All Employees"})
     try{
         const emps = await employeeModel.find()
-        res.status(200).send(emps)
+        res.status(200).json(emps)
     }catch(error){
-        res.status(500).send(error)
+        res.status(500).json(error)
     }
 })
 
